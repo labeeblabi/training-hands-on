@@ -1,0 +1,1039 @@
+bb-demo
+
+PS C:\Users\labim\OneDrive\Desktop\kuber> kubectl apply -f bb.yaml
+service/bb-entrypoint created
+PS C:\Users\labim\OneDrive\Desktop\kuber> kubectl get deployments
+NAME      READY   UP-TO-DATE   AVAILABLE   AGE
+bb-demo   1/1     1            1           20s
+PS C:\Users\labim\OneDrive\Desktop\kuber> kubectl get services
+bb-entrypoint   NodePort    10.110.48.121   <none>        3000:30001/TCP   95s
+kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP          20h
+PS C:\Users\labim\OneDrive\Desktop\kuber> kubectl delete -f bb.yaml
+deployment.apps "bb-demo" deleted
+service "bb-entrypoint" deleted
+
+pod
+
+PS C:\Users\labim\OneDrive\Desktop\kuber> kubectl apply -f pod.yaml
+pod/demo created
+PS C:\Users\labim\OneDrive\Desktop\kuber> kubectl get pods
+NAME   READY   STATUS    RESTARTS   AGE
+demo   1/1     Running   0          29m
+PS C:\Users\labim\OneDrive\Desktop\kuber> kubectl logs demo
+64 bytes from 8.8.8.8: seq=513 ttl=37 time=18.271 ms
+64 bytes from 8.8.8.8: seq=514 ttl=37 time=20.627 ms
+64 bytes from 8.8.8.8: seq=515 ttl=37 time=19.508 ms
+64 bytes from 8.8.8.8: seq=516 ttl=37 time=22.309 ms
+64 bytes from 8.8.8.8: seq=517 ttl=37 time=18.538 ms
+64 bytes from 8.8.8.8: seq=518 ttl=37 time=20.139 ms
+64 bytes from 8.8.8.8: seq=519 ttl=37 time=20.928 ms
+64 bytes from 8.8.8.8: seq=520 ttl=37 time=18.106 ms
+64 bytes from 8.8.8.8: seq=521 ttl=37 time=21.002 ms
+64 bytes from 8.8.8.8: seq=522 ttl=37 time=37.706 ms
+64 bytes from 8.8.8.8: seq=523 ttl=37 time=18.559 ms
+64 bytes from 8.8.8.8: seq=524 ttl=37 time=23.064 ms
+64 bytes from 8.8.8.8: seq=525 ttl=37 time=19.806 ms
+64 bytes from 8.8.8.8: seq=526 ttl=37 time=23.248 ms
+64 bytes from 8.8.8.8: seq=527 ttl=37 time=28.671 ms
+64 bytes from 8.8.8.8: seq=528 ttl=37 time=21.699 ms
+64 bytes from 8.8.8.8: seq=529 ttl=37 time=21.134 ms
+64 bytes from 8.8.8.8: seq=530 ttl=37 time=19.772 ms
+64 bytes from 8.8.8.8: seq=531 ttl=37 time=18.943 ms
+64 bytes from 8.8.8.8: seq=532 ttl=37 time=18.330 ms
+64 bytes from 8.8.8.8: seq=533 ttl=37 time=22.748 ms
+64 bytes from 8.8.8.8: seq=534 ttl=37 time=18.285 ms
+64 bytes from 8.8.8.8: seq=535 ttl=37 time=104.586 ms
+64 bytes from 8.8.8.8: seq=536 ttl=37 time=24.623 ms
+64 bytes from 8.8.8.8: seq=537 ttl=37 time=23.289 ms
+64 bytes from 8.8.8.8: seq=538 ttl=37 time=19.175 ms
+64 bytes from 8.8.8.8: seq=539 ttl=37 time=18.684 ms
+64 bytes from 8.8.8.8: seq=540 ttl=37 time=19.175 ms
+64 bytes from 8.8.8.8: seq=541 ttl=37 time=71.756 ms
+64 bytes from 8.8.8.8: seq=542 ttl=37 time=92.983 ms
+64 bytes from 8.8.8.8: seq=543 ttl=37 time=92.575 ms
+64 bytes from 8.8.8.8: seq=544 ttl=37 time=19.313 ms
+64 bytes from 8.8.8.8: seq=545 ttl=37 time=18.950 ms
+64 bytes from 8.8.8.8: seq=546 ttl=37 time=18.814 ms
+64 bytes from 8.8.8.8: seq=547 ttl=37 time=18.768 ms
+64 bytes from 8.8.8.8: seq=548 ttl=37 time=23.181 ms
+64 bytes from 8.8.8.8: seq=549 ttl=37 time=22.194 ms
+64 bytes from 8.8.8.8: seq=550 ttl=37 time=19.762 ms
+64 bytes from 8.8.8.8: seq=551 ttl=37 time=28.116 ms
+64 bytes from 8.8.8.8: seq=552 ttl=37 time=19.063 ms
+64 bytes from 8.8.8.8: seq=553 ttl=37 time=19.595 ms
+64 bytes from 8.8.8.8: seq=554 ttl=37 time=20.660 ms
+64 bytes from 8.8.8.8: seq=555 ttl=37 time=19.481 ms
+64 bytes from 8.8.8.8: seq=556 ttl=37 time=20.413 ms
+64 bytes from 8.8.8.8: seq=557 ttl=37 time=19.375 ms
+64 bytes from 8.8.8.8: seq=558 ttl=37 time=218.072 ms
+64 bytes from 8.8.8.8: seq=559 ttl=37 time=26.984 ms
+64 bytes from 8.8.8.8: seq=560 ttl=37 time=19.334 ms
+64 bytes from 8.8.8.8: seq=561 ttl=37 time=19.232 ms
+64 bytes from 8.8.8.8: seq=562 ttl=37 time=18.750 ms
+64 bytes from 8.8.8.8: seq=563 ttl=37 time=38.168 ms
+64 bytes from 8.8.8.8: seq=564 ttl=37 time=19.107 ms
+64 bytes from 8.8.8.8: seq=565 ttl=37 time=18.753 ms
+64 bytes from 8.8.8.8: seq=566 ttl=37 time=22.264 ms
+64 bytes from 8.8.8.8: seq=567 ttl=37 time=20.457 ms
+64 bytes from 8.8.8.8: seq=568 ttl=37 time=22.824 ms
+64 bytes from 8.8.8.8: seq=569 ttl=37 time=20.313 ms
+64 bytes from 8.8.8.8: seq=570 ttl=37 time=19.577 ms
+64 bytes from 8.8.8.8: seq=571 ttl=37 time=19.109 ms
+64 bytes from 8.8.8.8: seq=572 ttl=37 time=19.236 ms
+64 bytes from 8.8.8.8: seq=573 ttl=37 time=21.674 ms
+64 bytes from 8.8.8.8: seq=574 ttl=37 time=394.472 ms
+64 bytes from 8.8.8.8: seq=575 ttl=37 time=19.445 ms
+64 bytes from 8.8.8.8: seq=576 ttl=37 time=21.299 ms
+64 bytes from 8.8.8.8: seq=577 ttl=37 time=21.279 ms
+64 bytes from 8.8.8.8: seq=578 ttl=37 time=20.528 ms
+64 bytes from 8.8.8.8: seq=579 ttl=37 time=18.420 ms
+64 bytes from 8.8.8.8: seq=580 ttl=37 time=18.166 ms
+64 bytes from 8.8.8.8: seq=581 ttl=37 time=18.785 ms
+64 bytes from 8.8.8.8: seq=582 ttl=37 time=19.509 ms
+64 bytes from 8.8.8.8: seq=583 ttl=37 time=18.909 ms
+64 bytes from 8.8.8.8: seq=584 ttl=37 time=79.218 ms
+64 bytes from 8.8.8.8: seq=585 ttl=37 time=19.192 ms
+64 bytes from 8.8.8.8: seq=586 ttl=37 time=18.952 ms
+64 bytes from 8.8.8.8: seq=587 ttl=37 time=18.359 ms
+64 bytes from 8.8.8.8: seq=588 ttl=37 time=18.740 ms
+64 bytes from 8.8.8.8: seq=589 ttl=37 time=19.695 ms
+64 bytes from 8.8.8.8: seq=590 ttl=37 time=22.351 ms
+64 bytes from 8.8.8.8: seq=591 ttl=37 time=18.898 ms
+64 bytes from 8.8.8.8: seq=592 ttl=37 time=23.536 ms
+64 bytes from 8.8.8.8: seq=593 ttl=37 time=18.616 ms
+64 bytes from 8.8.8.8: seq=594 ttl=37 time=18.453 ms
+64 bytes from 8.8.8.8: seq=595 ttl=37 time=20.347 ms
+64 bytes from 8.8.8.8: seq=596 ttl=37 time=21.590 ms
+64 bytes from 8.8.8.8: seq=597 ttl=37 time=22.308 ms
+64 bytes from 8.8.8.8: seq=598 ttl=37 time=19.045 ms
+64 bytes from 8.8.8.8: seq=599 ttl=37 time=61.883 ms
+64 bytes from 8.8.8.8: seq=600 ttl=37 time=19.501 ms
+64 bytes from 8.8.8.8: seq=601 ttl=37 time=34.949 ms
+64 bytes from 8.8.8.8: seq=602 ttl=37 time=23.290 ms
+64 bytes from 8.8.8.8: seq=603 ttl=37 time=64.975 ms
+64 bytes from 8.8.8.8: seq=604 ttl=37 time=18.874 ms
+64 bytes from 8.8.8.8: seq=605 ttl=37 time=324.543 ms
+64 bytes from 8.8.8.8: seq=606 ttl=37 time=19.856 ms
+64 bytes from 8.8.8.8: seq=607 ttl=37 time=19.500 ms
+64 bytes from 8.8.8.8: seq=608 ttl=37 time=20.507 ms
+64 bytes from 8.8.8.8: seq=609 ttl=37 time=19.914 ms
+64 bytes from 8.8.8.8: seq=610 ttl=37 time=20.753 ms
+64 bytes from 8.8.8.8: seq=611 ttl=37 time=18.750 ms
+64 bytes from 8.8.8.8: seq=612 ttl=37 time=46.679 ms
+64 bytes from 8.8.8.8: seq=613 ttl=37 time=18.660 ms
+64 bytes from 8.8.8.8: seq=614 ttl=37 time=19.497 ms
+64 bytes from 8.8.8.8: seq=615 ttl=37 time=20.455 ms
+64 bytes from 8.8.8.8: seq=616 ttl=37 time=19.950 ms
+64 bytes from 8.8.8.8: seq=617 ttl=37 time=19.110 ms
+64 bytes from 8.8.8.8: seq=618 ttl=37 time=19.708 ms
+64 bytes from 8.8.8.8: seq=619 ttl=37 time=21.582 ms
+64 bytes from 8.8.8.8: seq=620 ttl=37 time=20.051 ms
+64 bytes from 8.8.8.8: seq=621 ttl=37 time=24.080 ms
+64 bytes from 8.8.8.8: seq=622 ttl=37 time=26.153 ms
+64 bytes from 8.8.8.8: seq=623 ttl=37 time=22.238 ms
+64 bytes from 8.8.8.8: seq=624 ttl=37 time=44.486 ms
+64 bytes from 8.8.8.8: seq=625 ttl=37 time=24.674 ms
+64 bytes from 8.8.8.8: seq=626 ttl=37 time=23.071 ms
+64 bytes from 8.8.8.8: seq=627 ttl=37 time=19.660 ms
+64 bytes from 8.8.8.8: seq=628 ttl=37 time=22.416 ms
+64 bytes from 8.8.8.8: seq=629 ttl=37 time=19.851 ms
+64 bytes from 8.8.8.8: seq=630 ttl=37 time=22.670 ms
+64 bytes from 8.8.8.8: seq=631 ttl=37 time=23.421 ms
+64 bytes from 8.8.8.8: seq=632 ttl=37 time=22.602 ms
+64 bytes from 8.8.8.8: seq=633 ttl=37 time=21.694 ms
+64 bytes from 8.8.8.8: seq=634 ttl=37 time=24.546 ms
+64 bytes from 8.8.8.8: seq=635 ttl=37 time=34.125 ms
+64 bytes from 8.8.8.8: seq=636 ttl=37 time=19.707 ms
+64 bytes from 8.8.8.8: seq=637 ttl=37 time=74.641 ms
+64 bytes from 8.8.8.8: seq=638 ttl=37 time=22.689 ms
+64 bytes from 8.8.8.8: seq=639 ttl=37 time=19.798 ms
+64 bytes from 8.8.8.8: seq=640 ttl=37 time=18.986 ms
+64 bytes from 8.8.8.8: seq=641 ttl=37 time=19.076 ms
+64 bytes from 8.8.8.8: seq=642 ttl=37 time=19.521 ms
+64 bytes from 8.8.8.8: seq=643 ttl=37 time=29.880 ms
+64 bytes from 8.8.8.8: seq=644 ttl=37 time=19.204 ms
+64 bytes from 8.8.8.8: seq=645 ttl=37 time=19.786 ms
+64 bytes from 8.8.8.8: seq=646 ttl=37 time=20.653 ms
+64 bytes from 8.8.8.8: seq=647 ttl=37 time=19.004 ms
+64 bytes from 8.8.8.8: seq=648 ttl=37 time=19.839 ms
+64 bytes from 8.8.8.8: seq=649 ttl=37 time=19.896 ms
+64 bytes from 8.8.8.8: seq=650 ttl=37 time=19.335 ms
+64 bytes from 8.8.8.8: seq=651 ttl=37 time=24.737 ms
+64 bytes from 8.8.8.8: seq=652 ttl=37 time=19.586 ms
+64 bytes from 8.8.8.8: seq=653 ttl=37 time=19.933 ms
+64 bytes from 8.8.8.8: seq=654 ttl=37 time=26.415 ms
+64 bytes from 8.8.8.8: seq=655 ttl=37 time=20.049 ms
+64 bytes from 8.8.8.8: seq=656 ttl=37 time=19.272 ms
+64 bytes from 8.8.8.8: seq=657 ttl=37 time=91.430 ms
+64 bytes from 8.8.8.8: seq=658 ttl=37 time=19.705 ms
+64 bytes from 8.8.8.8: seq=659 ttl=37 time=23.665 ms
+64 bytes from 8.8.8.8: seq=660 ttl=37 time=19.273 ms
+64 bytes from 8.8.8.8: seq=661 ttl=37 time=19.147 ms
+64 bytes from 8.8.8.8: seq=662 ttl=37 time=21.674 ms
+64 bytes from 8.8.8.8: seq=663 ttl=37 time=20.219 ms
+64 bytes from 8.8.8.8: seq=664 ttl=37 time=33.338 ms
+64 bytes from 8.8.8.8: seq=665 ttl=37 time=19.577 ms
+64 bytes from 8.8.8.8: seq=666 ttl=37 time=19.172 ms
+64 bytes from 8.8.8.8: seq=667 ttl=37 time=19.947 ms
+64 bytes from 8.8.8.8: seq=668 ttl=37 time=142.901 ms
+64 bytes from 8.8.8.8: seq=669 ttl=37 time=32.724 ms
+64 bytes from 8.8.8.8: seq=670 ttl=37 time=21.045 ms
+64 bytes from 8.8.8.8: seq=671 ttl=37 time=22.238 ms
+64 bytes from 8.8.8.8: seq=672 ttl=37 time=22.807 ms
+64 bytes from 8.8.8.8: seq=673 ttl=37 time=20.580 ms
+64 bytes from 8.8.8.8: seq=674 ttl=37 time=20.262 ms
+64 bytes from 8.8.8.8: seq=675 ttl=37 time=22.637 ms
+64 bytes from 8.8.8.8: seq=676 ttl=37 time=22.040 ms
+64 bytes from 8.8.8.8: seq=677 ttl=37 time=19.470 ms
+64 bytes from 8.8.8.8: seq=678 ttl=37 time=19.087 ms
+64 bytes from 8.8.8.8: seq=679 ttl=37 time=19.628 ms
+64 bytes from 8.8.8.8: seq=680 ttl=37 time=19.870 ms
+64 bytes from 8.8.8.8: seq=681 ttl=37 time=20.010 ms
+64 bytes from 8.8.8.8: seq=682 ttl=37 time=21.758 ms
+64 bytes from 8.8.8.8: seq=683 ttl=37 time=20.158 ms
+64 bytes from 8.8.8.8: seq=684 ttl=37 time=179.303 ms
+64 bytes from 8.8.8.8: seq=685 ttl=37 time=18.155 ms
+64 bytes from 8.8.8.8: seq=686 ttl=37 time=20.242 ms
+64 bytes from 8.8.8.8: seq=687 ttl=37 time=22.929 ms
+64 bytes from 8.8.8.8: seq=688 ttl=37 time=88.842 ms
+64 bytes from 8.8.8.8: seq=689 ttl=37 time=19.753 ms
+64 bytes from 8.8.8.8: seq=690 ttl=37 time=19.271 ms
+64 bytes from 8.8.8.8: seq=691 ttl=37 time=30.524 ms
+64 bytes from 8.8.8.8: seq=692 ttl=37 time=19.721 ms
+64 bytes from 8.8.8.8: seq=693 ttl=37 time=19.631 ms
+64 bytes from 8.8.8.8: seq=694 ttl=37 time=20.279 ms
+64 bytes from 8.8.8.8: seq=695 ttl=37 time=24.727 ms
+64 bytes from 8.8.8.8: seq=696 ttl=37 time=19.305 ms
+64 bytes from 8.8.8.8: seq=697 ttl=37 time=19.679 ms
+64 bytes from 8.8.8.8: seq=698 ttl=37 time=21.282 ms
+64 bytes from 8.8.8.8: seq=699 ttl=37 time=19.242 ms
+64 bytes from 8.8.8.8: seq=700 ttl=37 time=65.128 ms
+64 bytes from 8.8.8.8: seq=701 ttl=37 time=20.016 ms
+64 bytes from 8.8.8.8: seq=702 ttl=37 time=19.230 ms
+64 bytes from 8.8.8.8: seq=703 ttl=37 time=19.187 ms
+64 bytes from 8.8.8.8: seq=704 ttl=37 time=18.890 ms
+64 bytes from 8.8.8.8: seq=705 ttl=37 time=44.738 ms
+64 bytes from 8.8.8.8: seq=706 ttl=37 time=19.320 ms
+64 bytes from 8.8.8.8: seq=707 ttl=37 time=19.429 ms
+64 bytes from 8.8.8.8: seq=708 ttl=37 time=19.712 ms
+64 bytes from 8.8.8.8: seq=709 ttl=37 time=19.667 ms
+64 bytes from 8.8.8.8: seq=710 ttl=37 time=20.197 ms
+64 bytes from 8.8.8.8: seq=711 ttl=37 time=21.593 ms
+64 bytes from 8.8.8.8: seq=712 ttl=37 time=21.899 ms
+64 bytes from 8.8.8.8: seq=713 ttl=37 time=21.238 ms
+64 bytes from 8.8.8.8: seq=714 ttl=37 time=21.606 ms
+64 bytes from 8.8.8.8: seq=715 ttl=37 time=20.990 ms
+64 bytes from 8.8.8.8: seq=716 ttl=37 time=21.650 ms
+64 bytes from 8.8.8.8: seq=717 ttl=37 time=19.546 ms
+64 bytes from 8.8.8.8: seq=718 ttl=37 time=22.039 ms
+64 bytes from 8.8.8.8: seq=719 ttl=37 time=20.132 ms
+64 bytes from 8.8.8.8: seq=720 ttl=37 time=22.225 ms
+64 bytes from 8.8.8.8: seq=721 ttl=37 time=22.637 ms
+64 bytes from 8.8.8.8: seq=722 ttl=37 time=20.286 ms
+64 bytes from 8.8.8.8: seq=723 ttl=37 time=20.257 ms
+64 bytes from 8.8.8.8: seq=724 ttl=37 time=60.071 ms
+64 bytes from 8.8.8.8: seq=725 ttl=37 time=33.622 ms
+64 bytes from 8.8.8.8: seq=726 ttl=37 time=19.535 ms
+64 bytes from 8.8.8.8: seq=727 ttl=37 time=22.036 ms
+64 bytes from 8.8.8.8: seq=728 ttl=37 time=19.848 ms
+64 bytes from 8.8.8.8: seq=729 ttl=37 time=33.588 ms
+64 bytes from 8.8.8.8: seq=730 ttl=37 time=19.039 ms
+64 bytes from 8.8.8.8: seq=731 ttl=37 time=332.042 ms
+64 bytes from 8.8.8.8: seq=732 ttl=37 time=23.404 ms
+64 bytes from 8.8.8.8: seq=733 ttl=37 time=18.999 ms
+64 bytes from 8.8.8.8: seq=734 ttl=37 time=19.264 ms
+64 bytes from 8.8.8.8: seq=735 ttl=37 time=18.959 ms
+64 bytes from 8.8.8.8: seq=736 ttl=37 time=19.307 ms
+64 bytes from 8.8.8.8: seq=737 ttl=37 time=18.535 ms
+64 bytes from 8.8.8.8: seq=738 ttl=37 time=18.799 ms
+64 bytes from 8.8.8.8: seq=739 ttl=37 time=18.888 ms
+64 bytes from 8.8.8.8: seq=740 ttl=37 time=18.963 ms
+64 bytes from 8.8.8.8: seq=741 ttl=37 time=21.030 ms
+64 bytes from 8.8.8.8: seq=742 ttl=37 time=24.538 ms
+64 bytes from 8.8.8.8: seq=743 ttl=37 time=19.564 ms
+64 bytes from 8.8.8.8: seq=744 ttl=37 time=20.510 ms
+64 bytes from 8.8.8.8: seq=745 ttl=37 time=53.585 ms
+64 bytes from 8.8.8.8: seq=746 ttl=37 time=25.778 ms
+64 bytes from 8.8.8.8: seq=747 ttl=37 time=19.436 ms
+64 bytes from 8.8.8.8: seq=748 ttl=37 time=23.794 ms
+64 bytes from 8.8.8.8: seq=749 ttl=37 time=22.079 ms
+64 bytes from 8.8.8.8: seq=750 ttl=37 time=23.242 ms
+64 bytes from 8.8.8.8: seq=751 ttl=37 time=21.467 ms
+64 bytes from 8.8.8.8: seq=752 ttl=37 time=22.171 ms
+64 bytes from 8.8.8.8: seq=753 ttl=37 time=29.263 ms
+64 bytes from 8.8.8.8: seq=754 ttl=37 time=20.372 ms
+64 bytes from 8.8.8.8: seq=755 ttl=37 time=20.566 ms
+64 bytes from 8.8.8.8: seq=756 ttl=37 time=18.675 ms
+64 bytes from 8.8.8.8: seq=757 ttl=37 time=19.375 ms
+64 bytes from 8.8.8.8: seq=758 ttl=37 time=20.306 ms
+64 bytes from 8.8.8.8: seq=759 ttl=37 time=19.042 ms
+64 bytes from 8.8.8.8: seq=760 ttl=37 time=19.539 ms
+64 bytes from 8.8.8.8: seq=761 ttl=37 time=19.078 ms
+64 bytes from 8.8.8.8: seq=762 ttl=37 time=19.756 ms
+64 bytes from 8.8.8.8: seq=763 ttl=37 time=136.358 ms
+64 bytes from 8.8.8.8: seq=764 ttl=37 time=81.913 ms
+64 bytes from 8.8.8.8: seq=765 ttl=37 time=18.421 ms
+64 bytes from 8.8.8.8: seq=766 ttl=37 time=19.676 ms
+64 bytes from 8.8.8.8: seq=767 ttl=37 time=23.143 ms
+64 bytes from 8.8.8.8: seq=768 ttl=37 time=19.235 ms
+64 bytes from 8.8.8.8: seq=769 ttl=37 time=21.750 ms
+64 bytes from 8.8.8.8: seq=770 ttl=37 time=26.286 ms
+64 bytes from 8.8.8.8: seq=771 ttl=37 time=19.367 ms
+64 bytes from 8.8.8.8: seq=772 ttl=37 time=20.288 ms
+64 bytes from 8.8.8.8: seq=773 ttl=37 time=25.145 ms
+64 bytes from 8.8.8.8: seq=774 ttl=37 time=19.524 ms
+64 bytes from 8.8.8.8: seq=775 ttl=37 time=20.868 ms
+64 bytes from 8.8.8.8: seq=776 ttl=37 time=18.582 ms
+64 bytes from 8.8.8.8: seq=777 ttl=37 time=18.621 ms
+64 bytes from 8.8.8.8: seq=778 ttl=37 time=19.612 ms
+64 bytes from 8.8.8.8: seq=779 ttl=37 time=47.595 ms
+64 bytes from 8.8.8.8: seq=780 ttl=37 time=23.123 ms
+64 bytes from 8.8.8.8: seq=781 ttl=37 time=18.620 ms
+64 bytes from 8.8.8.8: seq=782 ttl=37 time=20.420 ms
+64 bytes from 8.8.8.8: seq=783 ttl=37 time=18.745 ms
+64 bytes from 8.8.8.8: seq=784 ttl=37 time=22.996 ms
+64 bytes from 8.8.8.8: seq=785 ttl=37 time=18.688 ms
+64 bytes from 8.8.8.8: seq=786 ttl=37 time=59.944 ms
+64 bytes from 8.8.8.8: seq=787 ttl=37 time=20.103 ms
+64 bytes from 8.8.8.8: seq=788 ttl=37 time=19.134 ms
+64 bytes from 8.8.8.8: seq=789 ttl=37 time=18.752 ms
+64 bytes from 8.8.8.8: seq=790 ttl=37 time=19.624 ms
+64 bytes from 8.8.8.8: seq=791 ttl=37 time=23.953 ms
+64 bytes from 8.8.8.8: seq=792 ttl=37 time=23.223 ms
+64 bytes from 8.8.8.8: seq=793 ttl=37 time=21.380 ms
+64 bytes from 8.8.8.8: seq=794 ttl=37 time=24.065 ms
+64 bytes from 8.8.8.8: seq=795 ttl=37 time=196.415 ms
+64 bytes from 8.8.8.8: seq=796 ttl=37 time=23.212 ms
+64 bytes from 8.8.8.8: seq=797 ttl=37 time=22.739 ms
+64 bytes from 8.8.8.8: seq=798 ttl=37 time=21.883 ms
+64 bytes from 8.8.8.8: seq=799 ttl=37 time=21.590 ms
+64 bytes from 8.8.8.8: seq=800 ttl=37 time=21.902 ms
+64 bytes from 8.8.8.8: seq=801 ttl=37 time=23.408 ms
+64 bytes from 8.8.8.8: seq=802 ttl=37 time=22.516 ms
+64 bytes from 8.8.8.8: seq=803 ttl=37 time=22.753 ms
+64 bytes from 8.8.8.8: seq=804 ttl=37 time=23.204 ms
+64 bytes from 8.8.8.8: seq=805 ttl=37 time=72.833 ms
+64 bytes from 8.8.8.8: seq=806 ttl=37 time=22.544 ms
+64 bytes from 8.8.8.8: seq=807 ttl=37 time=23.921 ms
+64 bytes from 8.8.8.8: seq=808 ttl=37 time=19.849 ms
+64 bytes from 8.8.8.8: seq=809 ttl=37 time=18.596 ms
+64 bytes from 8.8.8.8: seq=810 ttl=37 time=20.820 ms
+64 bytes from 8.8.8.8: seq=811 ttl=37 time=19.529 ms
+64 bytes from 8.8.8.8: seq=812 ttl=37 time=20.996 ms
+64 bytes from 8.8.8.8: seq=813 ttl=37 time=18.673 ms
+64 bytes from 8.8.8.8: seq=814 ttl=37 time=22.634 ms
+64 bytes from 8.8.8.8: seq=815 ttl=37 time=21.250 ms
+64 bytes from 8.8.8.8: seq=816 ttl=37 time=22.444 ms
+64 bytes from 8.8.8.8: seq=817 ttl=37 time=23.670 ms
+64 bytes from 8.8.8.8: seq=818 ttl=37 time=21.943 ms
+64 bytes from 8.8.8.8: seq=819 ttl=37 time=20.126 ms
+64 bytes from 8.8.8.8: seq=820 ttl=37 time=20.709 ms
+64 bytes from 8.8.8.8: seq=821 ttl=37 time=21.283 ms
+64 bytes from 8.8.8.8: seq=822 ttl=37 time=21.429 ms
+64 bytes from 8.8.8.8: seq=823 ttl=37 time=18.806 ms
+64 bytes from 8.8.8.8: seq=824 ttl=37 time=19.662 ms
+64 bytes from 8.8.8.8: seq=825 ttl=37 time=19.660 ms
+64 bytes from 8.8.8.8: seq=826 ttl=37 time=63.956 ms
+64 bytes from 8.8.8.8: seq=827 ttl=37 time=19.076 ms
+64 bytes from 8.8.8.8: seq=828 ttl=37 time=21.042 ms
+64 bytes from 8.8.8.8: seq=829 ttl=37 time=22.698 ms
+64 bytes from 8.8.8.8: seq=830 ttl=37 time=22.318 ms
+64 bytes from 8.8.8.8: seq=831 ttl=37 time=22.741 ms
+64 bytes from 8.8.8.8: seq=832 ttl=37 time=19.265 ms
+64 bytes from 8.8.8.8: seq=833 ttl=37 time=18.884 ms
+64 bytes from 8.8.8.8: seq=834 ttl=37 time=19.905 ms
+64 bytes from 8.8.8.8: seq=835 ttl=37 time=20.299 ms
+64 bytes from 8.8.8.8: seq=836 ttl=37 time=19.429 ms
+64 bytes from 8.8.8.8: seq=837 ttl=37 time=19.880 ms
+64 bytes from 8.8.8.8: seq=838 ttl=37 time=21.086 ms
+64 bytes from 8.8.8.8: seq=839 ttl=37 time=26.346 ms
+64 bytes from 8.8.8.8: seq=840 ttl=37 time=23.298 ms
+64 bytes from 8.8.8.8: seq=841 ttl=37 time=23.768 ms
+64 bytes from 8.8.8.8: seq=842 ttl=37 time=70.897 ms
+64 bytes from 8.8.8.8: seq=843 ttl=37 time=22.235 ms
+64 bytes from 8.8.8.8: seq=844 ttl=37 time=22.335 ms
+64 bytes from 8.8.8.8: seq=845 ttl=37 time=19.388 ms
+64 bytes from 8.8.8.8: seq=846 ttl=37 time=69.712 ms
+64 bytes from 8.8.8.8: seq=847 ttl=37 time=22.202 ms
+64 bytes from 8.8.8.8: seq=848 ttl=37 time=22.975 ms
+64 bytes from 8.8.8.8: seq=849 ttl=37 time=20.920 ms
+64 bytes from 8.8.8.8: seq=850 ttl=37 time=19.100 ms
+64 bytes from 8.8.8.8: seq=851 ttl=37 time=18.518 ms
+64 bytes from 8.8.8.8: seq=852 ttl=37 time=19.304 ms
+64 bytes from 8.8.8.8: seq=853 ttl=37 time=18.931 ms
+64 bytes from 8.8.8.8: seq=854 ttl=37 time=21.264 ms
+64 bytes from 8.8.8.8: seq=855 ttl=37 time=18.323 ms
+64 bytes from 8.8.8.8: seq=856 ttl=37 time=20.908 ms
+64 bytes from 8.8.8.8: seq=857 ttl=37 time=19.167 ms
+64 bytes from 8.8.8.8: seq=858 ttl=37 time=20.737 ms
+64 bytes from 8.8.8.8: seq=859 ttl=37 time=24.013 ms
+64 bytes from 8.8.8.8: seq=860 ttl=37 time=20.138 ms
+64 bytes from 8.8.8.8: seq=861 ttl=37 time=21.564 ms
+64 bytes from 8.8.8.8: seq=862 ttl=37 time=20.993 ms
+64 bytes from 8.8.8.8: seq=863 ttl=37 time=23.110 ms
+64 bytes from 8.8.8.8: seq=864 ttl=37 time=24.481 ms
+64 bytes from 8.8.8.8: seq=865 ttl=37 time=20.582 ms
+64 bytes from 8.8.8.8: seq=866 ttl=37 time=22.557 ms
+64 bytes from 8.8.8.8: seq=867 ttl=37 time=61.566 ms
+64 bytes from 8.8.8.8: seq=868 ttl=37 time=21.876 ms
+64 bytes from 8.8.8.8: seq=869 ttl=37 time=19.167 ms
+64 bytes from 8.8.8.8: seq=870 ttl=37 time=29.423 ms
+64 bytes from 8.8.8.8: seq=871 ttl=37 time=18.782 ms
+64 bytes from 8.8.8.8: seq=872 ttl=37 time=23.945 ms
+64 bytes from 8.8.8.8: seq=873 ttl=37 time=28.458 ms
+64 bytes from 8.8.8.8: seq=874 ttl=37 time=81.651 ms
+64 bytes from 8.8.8.8: seq=875 ttl=37 time=22.975 ms
+64 bytes from 8.8.8.8: seq=876 ttl=37 time=21.400 ms
+64 bytes from 8.8.8.8: seq=877 ttl=37 time=21.117 ms
+64 bytes from 8.8.8.8: seq=878 ttl=37 time=19.582 ms
+64 bytes from 8.8.8.8: seq=879 ttl=37 time=21.737 ms
+64 bytes from 8.8.8.8: seq=880 ttl=37 time=24.412 ms
+64 bytes from 8.8.8.8: seq=881 ttl=37 time=19.192 ms
+64 bytes from 8.8.8.8: seq=882 ttl=37 time=18.898 ms
+64 bytes from 8.8.8.8: seq=883 ttl=37 time=19.409 ms
+64 bytes from 8.8.8.8: seq=884 ttl=37 time=19.288 ms
+64 bytes from 8.8.8.8: seq=885 ttl=37 time=18.566 ms
+64 bytes from 8.8.8.8: seq=886 ttl=37 time=43.339 ms
+64 bytes from 8.8.8.8: seq=887 ttl=37 time=20.942 ms
+64 bytes from 8.8.8.8: seq=888 ttl=37 time=19.856 ms
+64 bytes from 8.8.8.8: seq=889 ttl=37 time=21.958 ms
+64 bytes from 8.8.8.8: seq=890 ttl=37 time=23.185 ms
+64 bytes from 8.8.8.8: seq=891 ttl=37 time=23.309 ms
+64 bytes from 8.8.8.8: seq=892 ttl=37 time=22.811 ms
+64 bytes from 8.8.8.8: seq=893 ttl=37 time=20.662 ms
+64 bytes from 8.8.8.8: seq=894 ttl=37 time=22.376 ms
+64 bytes from 8.8.8.8: seq=895 ttl=37 time=20.962 ms
+64 bytes from 8.8.8.8: seq=896 ttl=37 time=31.495 ms
+64 bytes from 8.8.8.8: seq=897 ttl=37 time=20.328 ms
+64 bytes from 8.8.8.8: seq=898 ttl=37 time=21.582 ms
+64 bytes from 8.8.8.8: seq=899 ttl=37 time=20.373 ms
+64 bytes from 8.8.8.8: seq=900 ttl=37 time=22.410 ms
+64 bytes from 8.8.8.8: seq=901 ttl=37 time=22.431 ms
+64 bytes from 8.8.8.8: seq=902 ttl=37 time=19.809 ms
+64 bytes from 8.8.8.8: seq=903 ttl=37 time=20.075 ms
+64 bytes from 8.8.8.8: seq=904 ttl=37 time=20.781 ms
+64 bytes from 8.8.8.8: seq=905 ttl=37 time=22.283 ms
+64 bytes from 8.8.8.8: seq=906 ttl=37 time=20.100 ms
+64 bytes from 8.8.8.8: seq=907 ttl=37 time=64.078 ms
+64 bytes from 8.8.8.8: seq=908 ttl=37 time=19.387 ms
+64 bytes from 8.8.8.8: seq=909 ttl=37 time=19.670 ms
+64 bytes from 8.8.8.8: seq=910 ttl=37 time=19.803 ms
+64 bytes from 8.8.8.8: seq=911 ttl=37 time=18.749 ms
+64 bytes from 8.8.8.8: seq=912 ttl=37 time=21.837 ms
+64 bytes from 8.8.8.8: seq=913 ttl=37 time=21.707 ms
+64 bytes from 8.8.8.8: seq=914 ttl=37 time=19.554 ms
+64 bytes from 8.8.8.8: seq=915 ttl=37 time=19.411 ms
+64 bytes from 8.8.8.8: seq=916 ttl=37 time=23.047 ms
+64 bytes from 8.8.8.8: seq=917 ttl=37 time=21.259 ms
+64 bytes from 8.8.8.8: seq=918 ttl=37 time=20.592 ms
+64 bytes from 8.8.8.8: seq=919 ttl=37 time=20.715 ms
+64 bytes from 8.8.8.8: seq=920 ttl=37 time=21.877 ms
+64 bytes from 8.8.8.8: seq=921 ttl=37 time=20.906 ms
+64 bytes from 8.8.8.8: seq=922 ttl=37 time=20.758 ms
+64 bytes from 8.8.8.8: seq=923 ttl=37 time=23.473 ms
+64 bytes from 8.8.8.8: seq=924 ttl=37 time=20.649 ms
+64 bytes from 8.8.8.8: seq=925 ttl=37 time=21.389 ms
+64 bytes from 8.8.8.8: seq=926 ttl=37 time=34.072 ms
+64 bytes from 8.8.8.8: seq=927 ttl=37 time=21.646 ms
+64 bytes from 8.8.8.8: seq=928 ttl=37 time=21.322 ms
+64 bytes from 8.8.8.8: seq=929 ttl=37 time=27.117 ms
+64 bytes from 8.8.8.8: seq=930 ttl=37 time=26.375 ms
+64 bytes from 8.8.8.8: seq=931 ttl=37 time=22.241 ms
+64 bytes from 8.8.8.8: seq=932 ttl=37 time=23.586 ms
+64 bytes from 8.8.8.8: seq=933 ttl=37 time=23.090 ms
+64 bytes from 8.8.8.8: seq=934 ttl=37 time=23.870 ms
+64 bytes from 8.8.8.8: seq=935 ttl=37 time=23.247 ms
+64 bytes from 8.8.8.8: seq=936 ttl=37 time=21.479 ms
+64 bytes from 8.8.8.8: seq=937 ttl=37 time=146.158 ms
+64 bytes from 8.8.8.8: seq=938 ttl=37 time=21.436 ms
+64 bytes from 8.8.8.8: seq=939 ttl=37 time=22.550 ms
+64 bytes from 8.8.8.8: seq=940 ttl=37 time=23.530 ms
+64 bytes from 8.8.8.8: seq=941 ttl=37 time=22.845 ms
+64 bytes from 8.8.8.8: seq=942 ttl=37 time=25.814 ms
+64 bytes from 8.8.8.8: seq=943 ttl=37 time=21.616 ms
+64 bytes from 8.8.8.8: seq=944 ttl=37 time=21.288 ms
+64 bytes from 8.8.8.8: seq=945 ttl=37 time=23.368 ms
+64 bytes from 8.8.8.8: seq=946 ttl=37 time=24.289 ms
+64 bytes from 8.8.8.8: seq=947 ttl=37 time=24.495 ms
+64 bytes from 8.8.8.8: seq=948 ttl=37 time=74.586 ms
+64 bytes from 8.8.8.8: seq=949 ttl=37 time=22.408 ms
+64 bytes from 8.8.8.8: seq=950 ttl=37 time=26.853 ms
+64 bytes from 8.8.8.8: seq=951 ttl=37 time=25.050 ms
+64 bytes from 8.8.8.8: seq=952 ttl=37 time=23.667 ms
+64 bytes from 8.8.8.8: seq=953 ttl=37 time=32.524 ms
+64 bytes from 8.8.8.8: seq=954 ttl=37 time=23.590 ms
+64 bytes from 8.8.8.8: seq=955 ttl=37 time=22.895 ms
+64 bytes from 8.8.8.8: seq=956 ttl=37 time=23.666 ms
+64 bytes from 8.8.8.8: seq=957 ttl=37 time=19.473 ms
+64 bytes from 8.8.8.8: seq=958 ttl=37 time=24.158 ms
+64 bytes from 8.8.8.8: seq=959 ttl=37 time=20.349 ms
+64 bytes from 8.8.8.8: seq=960 ttl=37 time=24.121 ms
+64 bytes from 8.8.8.8: seq=961 ttl=37 time=21.022 ms
+64 bytes from 8.8.8.8: seq=962 ttl=37 time=23.466 ms
+64 bytes from 8.8.8.8: seq=963 ttl=37 time=19.935 ms
+64 bytes from 8.8.8.8: seq=964 ttl=37 time=23.283 ms
+64 bytes from 8.8.8.8: seq=965 ttl=37 time=21.367 ms
+64 bytes from 8.8.8.8: seq=966 ttl=37 time=24.074 ms
+64 bytes from 8.8.8.8: seq=967 ttl=37 time=31.710 ms
+64 bytes from 8.8.8.8: seq=968 ttl=37 time=23.236 ms
+64 bytes from 8.8.8.8: seq=969 ttl=37 time=52.838 ms
+64 bytes from 8.8.8.8: seq=970 ttl=37 time=24.024 ms
+64 bytes from 8.8.8.8: seq=971 ttl=37 time=22.431 ms
+64 bytes from 8.8.8.8: seq=972 ttl=37 time=25.022 ms
+64 bytes from 8.8.8.8: seq=973 ttl=37 time=21.658 ms
+64 bytes from 8.8.8.8: seq=974 ttl=37 time=21.210 ms
+64 bytes from 8.8.8.8: seq=975 ttl=37 time=20.414 ms
+64 bytes from 8.8.8.8: seq=976 ttl=37 time=24.456 ms
+64 bytes from 8.8.8.8: seq=977 ttl=37 time=21.981 ms
+64 bytes from 8.8.8.8: seq=978 ttl=37 time=24.893 ms
+64 bytes from 8.8.8.8: seq=979 ttl=37 time=23.027 ms
+64 bytes from 8.8.8.8: seq=980 ttl=37 time=25.267 ms
+64 bytes from 8.8.8.8: seq=981 ttl=37 time=20.530 ms
+64 bytes from 8.8.8.8: seq=982 ttl=37 time=23.042 ms
+64 bytes from 8.8.8.8: seq=983 ttl=37 time=20.649 ms
+64 bytes from 8.8.8.8: seq=984 ttl=37 time=24.885 ms
+64 bytes from 8.8.8.8: seq=985 ttl=37 time=20.931 ms
+64 bytes from 8.8.8.8: seq=986 ttl=37 time=20.894 ms
+64 bytes from 8.8.8.8: seq=987 ttl=37 time=22.821 ms
+64 bytes from 8.8.8.8: seq=988 ttl=37 time=36.203 ms
+64 bytes from 8.8.8.8: seq=989 ttl=37 time=24.094 ms
+64 bytes from 8.8.8.8: seq=990 ttl=37 time=25.359 ms
+64 bytes from 8.8.8.8: seq=991 ttl=37 time=21.248 ms
+64 bytes from 8.8.8.8: seq=992 ttl=37 time=22.226 ms
+64 bytes from 8.8.8.8: seq=993 ttl=37 time=20.765 ms
+64 bytes from 8.8.8.8: seq=994 ttl=37 time=23.623 ms
+64 bytes from 8.8.8.8: seq=995 ttl=37 time=23.806 ms
+64 bytes from 8.8.8.8: seq=996 ttl=37 time=22.523 ms
+64 bytes from 8.8.8.8: seq=997 ttl=37 time=23.048 ms
+64 bytes from 8.8.8.8: seq=998 ttl=37 time=23.555 ms
+64 bytes from 8.8.8.8: seq=999 ttl=37 time=21.509 ms
+64 bytes from 8.8.8.8: seq=1000 ttl=37 time=22.353 ms
+64 bytes from 8.8.8.8: seq=1001 ttl=37 time=22.935 ms
+64 bytes from 8.8.8.8: seq=1002 ttl=37 time=24.019 ms
+64 bytes from 8.8.8.8: seq=1003 ttl=37 time=23.835 ms
+64 bytes from 8.8.8.8: seq=1004 ttl=37 time=20.896 ms
+64 bytes from 8.8.8.8: seq=1005 ttl=37 time=25.107 ms
+64 bytes from 8.8.8.8: seq=1006 ttl=37 time=24.572 ms
+64 bytes from 8.8.8.8: seq=1007 ttl=37 time=23.162 ms
+64 bytes from 8.8.8.8: seq=1008 ttl=37 time=43.437 ms
+64 bytes from 8.8.8.8: seq=1009 ttl=37 time=24.113 ms
+64 bytes from 8.8.8.8: seq=1010 ttl=37 time=20.977 ms
+64 bytes from 8.8.8.8: seq=1011 ttl=37 time=20.408 ms
+64 bytes from 8.8.8.8: seq=1012 ttl=37 time=21.496 ms
+64 bytes from 8.8.8.8: seq=1013 ttl=37 time=21.770 ms
+64 bytes from 8.8.8.8: seq=1014 ttl=37 time=21.345 ms
+64 bytes from 8.8.8.8: seq=1015 ttl=37 time=21.289 ms
+64 bytes from 8.8.8.8: seq=1016 ttl=37 time=27.909 ms
+64 bytes from 8.8.8.8: seq=1017 ttl=37 time=24.001 ms
+64 bytes from 8.8.8.8: seq=1018 ttl=37 time=23.590 ms
+64 bytes from 8.8.8.8: seq=1019 ttl=37 time=36.218 ms
+64 bytes from 8.8.8.8: seq=1020 ttl=37 time=21.356 ms
+64 bytes from 8.8.8.8: seq=1021 ttl=37 time=24.436 ms
+64 bytes from 8.8.8.8: seq=1022 ttl=37 time=78.066 ms
+64 bytes from 8.8.8.8: seq=1023 ttl=37 time=23.142 ms
+64 bytes from 8.8.8.8: seq=1024 ttl=37 time=23.460 ms
+64 bytes from 8.8.8.8: seq=1025 ttl=37 time=24.551 ms
+64 bytes from 8.8.8.8: seq=1026 ttl=37 time=22.664 ms
+64 bytes from 8.8.8.8: seq=1027 ttl=37 time=21.284 ms
+64 bytes from 8.8.8.8: seq=1028 ttl=37 time=23.335 ms
+64 bytes from 8.8.8.8: seq=1029 ttl=37 time=44.908 ms
+64 bytes from 8.8.8.8: seq=1030 ttl=37 time=21.210 ms
+64 bytes from 8.8.8.8: seq=1031 ttl=37 time=21.356 ms
+64 bytes from 8.8.8.8: seq=1032 ttl=37 time=186.423 ms
+64 bytes from 8.8.8.8: seq=1033 ttl=37 time=24.501 ms
+64 bytes from 8.8.8.8: seq=1034 ttl=37 time=20.801 ms
+64 bytes from 8.8.8.8: seq=1035 ttl=37 time=23.356 ms
+64 bytes from 8.8.8.8: seq=1036 ttl=37 time=23.118 ms
+64 bytes from 8.8.8.8: seq=1037 ttl=37 time=21.981 ms
+64 bytes from 8.8.8.8: seq=1038 ttl=37 time=23.089 ms
+64 bytes from 8.8.8.8: seq=1039 ttl=37 time=22.356 ms
+64 bytes from 8.8.8.8: seq=1040 ttl=37 time=21.285 ms
+64 bytes from 8.8.8.8: seq=1041 ttl=37 time=23.265 ms
+64 bytes from 8.8.8.8: seq=1042 ttl=37 time=23.783 ms
+64 bytes from 8.8.8.8: seq=1043 ttl=37 time=21.429 ms
+64 bytes from 8.8.8.8: seq=1044 ttl=37 time=20.711 ms
+64 bytes from 8.8.8.8: seq=1045 ttl=37 time=24.450 ms
+64 bytes from 8.8.8.8: seq=1046 ttl=37 time=22.509 ms
+64 bytes from 8.8.8.8: seq=1047 ttl=37 time=22.466 ms
+64 bytes from 8.8.8.8: seq=1048 ttl=37 time=87.183 ms
+64 bytes from 8.8.8.8: seq=1049 ttl=37 time=20.575 ms
+64 bytes from 8.8.8.8: seq=1050 ttl=37 time=23.434 ms
+64 bytes from 8.8.8.8: seq=1051 ttl=37 time=20.740 ms
+64 bytes from 8.8.8.8: seq=1052 ttl=37 time=23.988 ms
+64 bytes from 8.8.8.8: seq=1053 ttl=37 time=22.054 ms
+64 bytes from 8.8.8.8: seq=1054 ttl=37 time=20.135 ms
+64 bytes from 8.8.8.8: seq=1055 ttl=37 time=23.729 ms
+64 bytes from 8.8.8.8: seq=1056 ttl=37 time=19.808 ms
+64 bytes from 8.8.8.8: seq=1057 ttl=37 time=30.942 ms
+64 bytes from 8.8.8.8: seq=1058 ttl=37 time=23.559 ms
+64 bytes from 8.8.8.8: seq=1059 ttl=37 time=20.669 ms
+64 bytes from 8.8.8.8: seq=1060 ttl=37 time=20.462 ms
+64 bytes from 8.8.8.8: seq=1061 ttl=37 time=19.916 ms
+64 bytes from 8.8.8.8: seq=1062 ttl=37 time=20.297 ms
+64 bytes from 8.8.8.8: seq=1063 ttl=37 time=21.522 ms
+64 bytes from 8.8.8.8: seq=1064 ttl=37 time=20.594 ms
+64 bytes from 8.8.8.8: seq=1065 ttl=37 time=24.806 ms
+64 bytes from 8.8.8.8: seq=1066 ttl=37 time=21.680 ms
+64 bytes from 8.8.8.8: seq=1067 ttl=37 time=21.251 ms
+64 bytes from 8.8.8.8: seq=1068 ttl=37 time=19.600 ms
+64 bytes from 8.8.8.8: seq=1069 ttl=37 time=20.122 ms
+64 bytes from 8.8.8.8: seq=1070 ttl=37 time=34.221 ms
+64 bytes from 8.8.8.8: seq=1071 ttl=37 time=18.873 ms
+64 bytes from 8.8.8.8: seq=1072 ttl=37 time=22.607 ms
+64 bytes from 8.8.8.8: seq=1073 ttl=37 time=32.964 ms
+64 bytes from 8.8.8.8: seq=1074 ttl=37 time=23.029 ms
+64 bytes from 8.8.8.8: seq=1075 ttl=37 time=20.104 ms
+64 bytes from 8.8.8.8: seq=1076 ttl=37 time=24.044 ms
+64 bytes from 8.8.8.8: seq=1077 ttl=37 time=20.577 ms
+64 bytes from 8.8.8.8: seq=1078 ttl=37 time=22.214 ms
+64 bytes from 8.8.8.8: seq=1079 ttl=37 time=24.716 ms
+64 bytes from 8.8.8.8: seq=1080 ttl=37 time=20.819 ms
+64 bytes from 8.8.8.8: seq=1081 ttl=37 time=22.967 ms
+64 bytes from 8.8.8.8: seq=1082 ttl=37 time=31.126 ms
+64 bytes from 8.8.8.8: seq=1083 ttl=37 time=21.066 ms
+64 bytes from 8.8.8.8: seq=1084 ttl=37 time=26.601 ms
+64 bytes from 8.8.8.8: seq=1085 ttl=37 time=21.037 ms
+64 bytes from 8.8.8.8: seq=1086 ttl=37 time=23.731 ms
+64 bytes from 8.8.8.8: seq=1087 ttl=37 time=24.213 ms
+64 bytes from 8.8.8.8: seq=1088 ttl=37 time=19.826 ms
+64 bytes from 8.8.8.8: seq=1089 ttl=37 time=36.018 ms
+64 bytes from 8.8.8.8: seq=1090 ttl=37 time=20.985 ms
+64 bytes from 8.8.8.8: seq=1091 ttl=37 time=19.787 ms
+64 bytes from 8.8.8.8: seq=1092 ttl=37 time=39.740 ms
+64 bytes from 8.8.8.8: seq=1093 ttl=37 time=20.337 ms
+64 bytes from 8.8.8.8: seq=1094 ttl=37 time=20.862 ms
+64 bytes from 8.8.8.8: seq=1095 ttl=37 time=20.784 ms
+64 bytes from 8.8.8.8: seq=1096 ttl=37 time=21.372 ms
+64 bytes from 8.8.8.8: seq=1097 ttl=37 time=22.123 ms
+64 bytes from 8.8.8.8: seq=1098 ttl=37 time=23.309 ms
+64 bytes from 8.8.8.8: seq=1099 ttl=37 time=22.628 ms
+64 bytes from 8.8.8.8: seq=1100 ttl=37 time=22.902 ms
+64 bytes from 8.8.8.8: seq=1101 ttl=37 time=20.399 ms
+64 bytes from 8.8.8.8: seq=1102 ttl=37 time=27.663 ms
+64 bytes from 8.8.8.8: seq=1103 ttl=37 time=20.962 ms
+64 bytes from 8.8.8.8: seq=1104 ttl=37 time=23.376 ms
+64 bytes from 8.8.8.8: seq=1105 ttl=37 time=21.986 ms
+64 bytes from 8.8.8.8: seq=1106 ttl=37 time=20.156 ms
+64 bytes from 8.8.8.8: seq=1107 ttl=37 time=19.936 ms
+64 bytes from 8.8.8.8: seq=1108 ttl=37 time=26.562 ms
+64 bytes from 8.8.8.8: seq=1109 ttl=37 time=25.943 ms
+64 bytes from 8.8.8.8: seq=1110 ttl=37 time=50.510 ms
+64 bytes from 8.8.8.8: seq=1111 ttl=37 time=21.266 ms
+64 bytes from 8.8.8.8: seq=1112 ttl=37 time=24.237 ms
+64 bytes from 8.8.8.8: seq=1113 ttl=37 time=19.551 ms
+64 bytes from 8.8.8.8: seq=1114 ttl=37 time=25.092 ms
+64 bytes from 8.8.8.8: seq=1115 ttl=37 time=24.434 ms
+64 bytes from 8.8.8.8: seq=1116 ttl=37 time=20.723 ms
+64 bytes from 8.8.8.8: seq=1117 ttl=37 time=20.653 ms
+64 bytes from 8.8.8.8: seq=1118 ttl=37 time=25.528 ms
+64 bytes from 8.8.8.8: seq=1119 ttl=37 time=20.290 ms
+64 bytes from 8.8.8.8: seq=1120 ttl=37 time=21.688 ms
+64 bytes from 8.8.8.8: seq=1121 ttl=37 time=21.401 ms
+64 bytes from 8.8.8.8: seq=1122 ttl=37 time=21.996 ms
+64 bytes from 8.8.8.8: seq=1123 ttl=37 time=20.788 ms
+64 bytes from 8.8.8.8: seq=1124 ttl=37 time=19.186 ms
+64 bytes from 8.8.8.8: seq=1125 ttl=37 time=22.442 ms
+64 bytes from 8.8.8.8: seq=1126 ttl=37 time=20.088 ms
+64 bytes from 8.8.8.8: seq=1127 ttl=37 time=24.896 ms
+64 bytes from 8.8.8.8: seq=1128 ttl=37 time=18.292 ms
+64 bytes from 8.8.8.8: seq=1129 ttl=37 time=49.971 ms
+64 bytes from 8.8.8.8: seq=1130 ttl=37 time=21.505 ms
+64 bytes from 8.8.8.8: seq=1131 ttl=37 time=23.682 ms
+64 bytes from 8.8.8.8: seq=1132 ttl=37 time=21.121 ms
+64 bytes from 8.8.8.8: seq=1133 ttl=37 time=23.743 ms
+64 bytes from 8.8.8.8: seq=1134 ttl=37 time=26.095 ms
+64 bytes from 8.8.8.8: seq=1135 ttl=37 time=20.209 ms
+64 bytes from 8.8.8.8: seq=1136 ttl=37 time=23.275 ms
+64 bytes from 8.8.8.8: seq=1137 ttl=37 time=22.216 ms
+64 bytes from 8.8.8.8: seq=1138 ttl=37 time=20.988 ms
+64 bytes from 8.8.8.8: seq=1139 ttl=37 time=20.007 ms
+64 bytes from 8.8.8.8: seq=1140 ttl=37 time=20.150 ms
+64 bytes from 8.8.8.8: seq=1141 ttl=37 time=55.240 ms
+64 bytes from 8.8.8.8: seq=1142 ttl=37 time=20.497 ms
+64 bytes from 8.8.8.8: seq=1143 ttl=37 time=48.709 ms
+64 bytes from 8.8.8.8: seq=1144 ttl=37 time=21.569 ms
+64 bytes from 8.8.8.8: seq=1145 ttl=37 time=22.410 ms
+64 bytes from 8.8.8.8: seq=1146 ttl=37 time=25.428 ms
+64 bytes from 8.8.8.8: seq=1147 ttl=37 time=24.892 ms
+64 bytes from 8.8.8.8: seq=1148 ttl=37 time=22.647 ms
+64 bytes from 8.8.8.8: seq=1149 ttl=37 time=20.284 ms
+64 bytes from 8.8.8.8: seq=1150 ttl=37 time=19.776 ms
+64 bytes from 8.8.8.8: seq=1151 ttl=37 time=58.039 ms
+64 bytes from 8.8.8.8: seq=1152 ttl=37 time=20.056 ms
+64 bytes from 8.8.8.8: seq=1153 ttl=37 time=19.261 ms
+64 bytes from 8.8.8.8: seq=1154 ttl=37 time=29.171 ms
+64 bytes from 8.8.8.8: seq=1155 ttl=37 time=21.859 ms
+64 bytes from 8.8.8.8: seq=1156 ttl=37 time=23.814 ms
+64 bytes from 8.8.8.8: seq=1157 ttl=37 time=23.088 ms
+64 bytes from 8.8.8.8: seq=1158 ttl=37 time=22.507 ms
+64 bytes from 8.8.8.8: seq=1159 ttl=37 time=24.644 ms
+64 bytes from 8.8.8.8: seq=1160 ttl=37 time=23.203 ms
+64 bytes from 8.8.8.8: seq=1161 ttl=37 time=23.229 ms
+64 bytes from 8.8.8.8: seq=1162 ttl=37 time=22.194 ms
+64 bytes from 8.8.8.8: seq=1163 ttl=37 time=24.560 ms
+64 bytes from 8.8.8.8: seq=1164 ttl=37 time=19.863 ms
+64 bytes from 8.8.8.8: seq=1165 ttl=37 time=24.274 ms
+64 bytes from 8.8.8.8: seq=1166 ttl=37 time=21.960 ms
+64 bytes from 8.8.8.8: seq=1167 ttl=37 time=29.156 ms
+64 bytes from 8.8.8.8: seq=1168 ttl=37 time=23.138 ms
+64 bytes from 8.8.8.8: seq=1169 ttl=37 time=23.270 ms
+64 bytes from 8.8.8.8: seq=1170 ttl=37 time=38.102 ms
+64 bytes from 8.8.8.8: seq=1171 ttl=37 time=22.942 ms
+64 bytes from 8.8.8.8: seq=1172 ttl=37 time=57.464 ms
+64 bytes from 8.8.8.8: seq=1173 ttl=37 time=21.065 ms
+64 bytes from 8.8.8.8: seq=1174 ttl=37 time=20.259 ms
+64 bytes from 8.8.8.8: seq=1175 ttl=37 time=22.211 ms
+64 bytes from 8.8.8.8: seq=1176 ttl=37 time=29.848 ms
+64 bytes from 8.8.8.8: seq=1177 ttl=37 time=23.862 ms
+64 bytes from 8.8.8.8: seq=1178 ttl=37 time=21.998 ms
+64 bytes from 8.8.8.8: seq=1179 ttl=37 time=20.397 ms
+64 bytes from 8.8.8.8: seq=1180 ttl=37 time=59.655 ms
+64 bytes from 8.8.8.8: seq=1181 ttl=37 time=20.837 ms
+64 bytes from 8.8.8.8: seq=1182 ttl=37 time=20.045 ms
+64 bytes from 8.8.8.8: seq=1183 ttl=37 time=23.257 ms
+64 bytes from 8.8.8.8: seq=1184 ttl=37 time=21.057 ms
+64 bytes from 8.8.8.8: seq=1185 ttl=37 time=22.085 ms
+64 bytes from 8.8.8.8: seq=1186 ttl=37 time=21.456 ms
+64 bytes from 8.8.8.8: seq=1187 ttl=37 time=23.639 ms
+64 bytes from 8.8.8.8: seq=1188 ttl=37 time=20.538 ms
+64 bytes from 8.8.8.8: seq=1189 ttl=37 time=24.478 ms
+64 bytes from 8.8.8.8: seq=1190 ttl=37 time=25.924 ms
+64 bytes from 8.8.8.8: seq=1191 ttl=37 time=22.894 ms
+64 bytes from 8.8.8.8: seq=1192 ttl=37 time=75.962 ms
+64 bytes from 8.8.8.8: seq=1193 ttl=37 time=21.005 ms
+64 bytes from 8.8.8.8: seq=1194 ttl=37 time=20.422 ms
+64 bytes from 8.8.8.8: seq=1195 ttl=37 time=21.865 ms
+64 bytes from 8.8.8.8: seq=1196 ttl=37 time=20.699 ms
+64 bytes from 8.8.8.8: seq=1197 ttl=37 time=22.723 ms
+64 bytes from 8.8.8.8: seq=1198 ttl=37 time=20.465 ms
+64 bytes from 8.8.8.8: seq=1199 ttl=37 time=31.126 ms
+64 bytes from 8.8.8.8: seq=1200 ttl=37 time=24.809 ms
+64 bytes from 8.8.8.8: seq=1201 ttl=37 time=24.038 ms
+64 bytes from 8.8.8.8: seq=1202 ttl=37 time=28.801 ms
+64 bytes from 8.8.8.8: seq=1203 ttl=37 time=25.308 ms
+64 bytes from 8.8.8.8: seq=1204 ttl=37 time=31.644 ms
+64 bytes from 8.8.8.8: seq=1205 ttl=37 time=21.236 ms
+64 bytes from 8.8.8.8: seq=1206 ttl=37 time=22.921 ms
+64 bytes from 8.8.8.8: seq=1207 ttl=37 time=23.172 ms
+64 bytes from 8.8.8.8: seq=1208 ttl=37 time=24.407 ms
+64 bytes from 8.8.8.8: seq=1209 ttl=37 time=24.312 ms
+64 bytes from 8.8.8.8: seq=1210 ttl=37 time=48.277 ms
+64 bytes from 8.8.8.8: seq=1211 ttl=37 time=22.199 ms
+64 bytes from 8.8.8.8: seq=1212 ttl=37 time=23.453 ms
+64 bytes from 8.8.8.8: seq=1213 ttl=37 time=23.412 ms
+64 bytes from 8.8.8.8: seq=1214 ttl=37 time=28.693 ms
+64 bytes from 8.8.8.8: seq=1215 ttl=37 time=25.309 ms
+64 bytes from 8.8.8.8: seq=1216 ttl=37 time=22.061 ms
+64 bytes from 8.8.8.8: seq=1217 ttl=37 time=24.340 ms
+64 bytes from 8.8.8.8: seq=1218 ttl=37 time=27.029 ms
+64 bytes from 8.8.8.8: seq=1219 ttl=37 time=23.453 ms
+64 bytes from 8.8.8.8: seq=1220 ttl=37 time=22.046 ms
+64 bytes from 8.8.8.8: seq=1221 ttl=37 time=21.447 ms
+64 bytes from 8.8.8.8: seq=1222 ttl=37 time=21.981 ms
+64 bytes from 8.8.8.8: seq=1223 ttl=37 time=21.492 ms
+64 bytes from 8.8.8.8: seq=1224 ttl=37 time=26.714 ms
+64 bytes from 8.8.8.8: seq=1225 ttl=37 time=20.150 ms
+64 bytes from 8.8.8.8: seq=1226 ttl=37 time=32.096 ms
+64 bytes from 8.8.8.8: seq=1227 ttl=37 time=20.867 ms
+64 bytes from 8.8.8.8: seq=1228 ttl=37 time=21.987 ms
+64 bytes from 8.8.8.8: seq=1229 ttl=37 time=21.424 ms
+64 bytes from 8.8.8.8: seq=1230 ttl=37 time=26.373 ms
+64 bytes from 8.8.8.8: seq=1231 ttl=37 time=20.638 ms
+64 bytes from 8.8.8.8: seq=1232 ttl=37 time=39.279 ms
+64 bytes from 8.8.8.8: seq=1233 ttl=37 time=20.744 ms
+64 bytes from 8.8.8.8: seq=1234 ttl=37 time=22.205 ms
+64 bytes from 8.8.8.8: seq=1235 ttl=37 time=21.841 ms
+64 bytes from 8.8.8.8: seq=1236 ttl=37 time=19.293 ms
+64 bytes from 8.8.8.8: seq=1237 ttl=37 time=20.445 ms
+64 bytes from 8.8.8.8: seq=1238 ttl=37 time=31.049 ms
+64 bytes from 8.8.8.8: seq=1239 ttl=37 time=22.705 ms
+64 bytes from 8.8.8.8: seq=1240 ttl=37 time=30.802 ms
+64 bytes from 8.8.8.8: seq=1241 ttl=37 time=24.487 ms
+64 bytes from 8.8.8.8: seq=1242 ttl=37 time=21.076 ms
+64 bytes from 8.8.8.8: seq=1243 ttl=37 time=22.382 ms
+64 bytes from 8.8.8.8: seq=1244 ttl=37 time=25.453 ms
+64 bytes from 8.8.8.8: seq=1245 ttl=37 time=22.638 ms
+64 bytes from 8.8.8.8: seq=1246 ttl=37 time=21.996 ms
+64 bytes from 8.8.8.8: seq=1247 ttl=37 time=23.785 ms
+64 bytes from 8.8.8.8: seq=1248 ttl=37 time=21.423 ms
+64 bytes from 8.8.8.8: seq=1249 ttl=37 time=21.570 ms
+64 bytes from 8.8.8.8: seq=1250 ttl=37 time=21.782 ms
+64 bytes from 8.8.8.8: seq=1251 ttl=37 time=59.408 ms
+64 bytes from 8.8.8.8: seq=1252 ttl=37 time=22.786 ms
+64 bytes from 8.8.8.8: seq=1253 ttl=37 time=30.470 ms
+64 bytes from 8.8.8.8: seq=1254 ttl=37 time=20.980 ms
+64 bytes from 8.8.8.8: seq=1255 ttl=37 time=20.558 ms
+64 bytes from 8.8.8.8: seq=1256 ttl=37 time=22.027 ms
+64 bytes from 8.8.8.8: seq=1257 ttl=37 time=22.912 ms
+64 bytes from 8.8.8.8: seq=1258 ttl=37 time=23.646 ms
+64 bytes from 8.8.8.8: seq=1259 ttl=37 time=20.513 ms
+64 bytes from 8.8.8.8: seq=1260 ttl=37 time=25.573 ms
+64 bytes from 8.8.8.8: seq=1261 ttl=37 time=24.102 ms
+64 bytes from 8.8.8.8: seq=1262 ttl=37 time=42.143 ms
+64 bytes from 8.8.8.8: seq=1263 ttl=37 time=80.417 ms
+64 bytes from 8.8.8.8: seq=1264 ttl=37 time=54.411 ms
+64 bytes from 8.8.8.8: seq=1265 ttl=37 time=35.331 ms
+64 bytes from 8.8.8.8: seq=1266 ttl=37 time=26.301 ms
+64 bytes from 8.8.8.8: seq=1267 ttl=37 time=20.146 ms
+64 bytes from 8.8.8.8: seq=1268 ttl=37 time=36.189 ms
+64 bytes from 8.8.8.8: seq=1269 ttl=37 time=20.963 ms
+64 bytes from 8.8.8.8: seq=1270 ttl=37 time=20.152 ms
+64 bytes from 8.8.8.8: seq=1271 ttl=37 time=21.788 ms
+64 bytes from 8.8.8.8: seq=1272 ttl=37 time=20.621 ms
+64 bytes from 8.8.8.8: seq=1273 ttl=37 time=38.881 ms
+64 bytes from 8.8.8.8: seq=1274 ttl=37 time=20.281 ms
+64 bytes from 8.8.8.8: seq=1275 ttl=37 time=48.999 ms
+64 bytes from 8.8.8.8: seq=1276 ttl=37 time=20.520 ms
+64 bytes from 8.8.8.8: seq=1277 ttl=37 time=20.616 ms
+64 bytes from 8.8.8.8: seq=1278 ttl=37 time=53.305 ms
+64 bytes from 8.8.8.8: seq=1279 ttl=37 time=21.443 ms
+64 bytes from 8.8.8.8: seq=1280 ttl=37 time=38.823 ms
+64 bytes from 8.8.8.8: seq=1281 ttl=37 time=20.407 ms
+64 bytes from 8.8.8.8: seq=1282 ttl=37 time=21.211 ms
+64 bytes from 8.8.8.8: seq=1283 ttl=37 time=33.403 ms
+64 bytes from 8.8.8.8: seq=1284 ttl=37 time=25.899 ms
+64 bytes from 8.8.8.8: seq=1285 ttl=37 time=19.055 ms
+64 bytes from 8.8.8.8: seq=1286 ttl=37 time=18.701 ms
+64 bytes from 8.8.8.8: seq=1287 ttl=37 time=21.365 ms
+64 bytes from 8.8.8.8: seq=1288 ttl=37 time=20.659 ms
+64 bytes from 8.8.8.8: seq=1289 ttl=37 time=26.217 ms
+64 bytes from 8.8.8.8: seq=1290 ttl=37 time=20.985 ms
+64 bytes from 8.8.8.8: seq=1291 ttl=37 time=62.918 ms
+64 bytes from 8.8.8.8: seq=1292 ttl=37 time=24.155 ms
+64 bytes from 8.8.8.8: seq=1293 ttl=37 time=28.539 ms
+64 bytes from 8.8.8.8: seq=1294 ttl=37 time=22.078 ms
+64 bytes from 8.8.8.8: seq=1295 ttl=37 time=20.220 ms
+64 bytes from 8.8.8.8: seq=1296 ttl=37 time=19.399 ms
+64 bytes from 8.8.8.8: seq=1297 ttl=37 time=41.456 ms
+64 bytes from 8.8.8.8: seq=1298 ttl=37 time=22.097 ms
+64 bytes from 8.8.8.8: seq=1299 ttl=37 time=20.049 ms
+64 bytes from 8.8.8.8: seq=1300 ttl=37 time=23.246 ms
+64 bytes from 8.8.8.8: seq=1301 ttl=37 time=18.760 ms
+64 bytes from 8.8.8.8: seq=1302 ttl=37 time=20.716 ms
+64 bytes from 8.8.8.8: seq=1303 ttl=37 time=24.919 ms
+64 bytes from 8.8.8.8: seq=1304 ttl=37 time=26.547 ms
+64 bytes from 8.8.8.8: seq=1305 ttl=37 time=18.201 ms
+64 bytes from 8.8.8.8: seq=1306 ttl=37 time=76.556 ms
+64 bytes from 8.8.8.8: seq=1307 ttl=37 time=111.559 ms
+64 bytes from 8.8.8.8: seq=1308 ttl=37 time=50.065 ms
+64 bytes from 8.8.8.8: seq=1309 ttl=37 time=20.187 ms
+64 bytes from 8.8.8.8: seq=1310 ttl=37 time=18.854 ms
+64 bytes from 8.8.8.8: seq=1311 ttl=37 time=19.418 ms
+64 bytes from 8.8.8.8: seq=1312 ttl=37 time=20.817 ms
+64 bytes from 8.8.8.8: seq=1313 ttl=37 time=30.859 ms
+64 bytes from 8.8.8.8: seq=1314 ttl=37 time=22.109 ms
+64 bytes from 8.8.8.8: seq=1315 ttl=37 time=18.866 ms
+64 bytes from 8.8.8.8: seq=1316 ttl=37 time=20.218 ms
+64 bytes from 8.8.8.8: seq=1317 ttl=37 time=21.032 ms
+64 bytes from 8.8.8.8: seq=1318 ttl=37 time=22.732 ms
+64 bytes from 8.8.8.8: seq=1319 ttl=37 time=19.232 ms
+64 bytes from 8.8.8.8: seq=1320 ttl=37 time=18.577 ms
+64 bytes from 8.8.8.8: seq=1321 ttl=37 time=19.579 ms
+64 bytes from 8.8.8.8: seq=1322 ttl=37 time=18.483 ms
+64 bytes from 8.8.8.8: seq=1323 ttl=37 time=19.497 ms
+64 bytes from 8.8.8.8: seq=1324 ttl=37 time=18.651 ms
+64 bytes from 8.8.8.8: seq=1325 ttl=37 time=19.053 ms
+64 bytes from 8.8.8.8: seq=1326 ttl=37 time=20.235 ms
+64 bytes from 8.8.8.8: seq=1327 ttl=37 time=20.424 ms
+64 bytes from 8.8.8.8: seq=1328 ttl=37 time=21.010 ms
+64 bytes from 8.8.8.8: seq=1329 ttl=37 time=19.794 ms
+64 bytes from 8.8.8.8: seq=1330 ttl=37 time=20.676 ms
+64 bytes from 8.8.8.8: seq=1331 ttl=37 time=19.940 ms
+64 bytes from 8.8.8.8: seq=1332 ttl=37 time=46.770 ms
+64 bytes from 8.8.8.8: seq=1333 ttl=37 time=22.119 ms
+64 bytes from 8.8.8.8: seq=1334 ttl=37 time=28.297 ms
+64 bytes from 8.8.8.8: seq=1335 ttl=37 time=19.103 ms
+64 bytes from 8.8.8.8: seq=1336 ttl=37 time=18.550 ms
+64 bytes from 8.8.8.8: seq=1337 ttl=37 time=18.177 ms
+64 bytes from 8.8.8.8: seq=1338 ttl=37 time=19.040 ms
+64 bytes from 8.8.8.8: seq=1339 ttl=37 time=20.813 ms
+64 bytes from 8.8.8.8: seq=1340 ttl=37 time=40.247 ms
+64 bytes from 8.8.8.8: seq=1341 ttl=37 time=19.865 ms
+64 bytes from 8.8.8.8: seq=1342 ttl=37 time=19.655 ms
+64 bytes from 8.8.8.8: seq=1343 ttl=37 time=21.146 ms
+64 bytes from 8.8.8.8: seq=1344 ttl=37 time=19.370 ms
+64 bytes from 8.8.8.8: seq=1345 ttl=37 time=18.586 ms
+64 bytes from 8.8.8.8: seq=1346 ttl=37 time=19.261 ms
+64 bytes from 8.8.8.8: seq=1347 ttl=37 time=110.517 ms
+64 bytes from 8.8.8.8: seq=1348 ttl=37 time=23.019 ms
+64 bytes from 8.8.8.8: seq=1349 ttl=37 time=21.618 ms
+64 bytes from 8.8.8.8: seq=1350 ttl=37 time=22.098 ms
+64 bytes from 8.8.8.8: seq=1351 ttl=37 time=19.022 ms
+64 bytes from 8.8.8.8: seq=1352 ttl=37 time=21.668 ms
+64 bytes from 8.8.8.8: seq=1353 ttl=37 time=19.564 ms
+64 bytes from 8.8.8.8: seq=1354 ttl=37 time=38.286 ms
+64 bytes from 8.8.8.8: seq=1355 ttl=37 time=20.065 ms
+64 bytes from 8.8.8.8: seq=1356 ttl=37 time=20.615 ms
+64 bytes from 8.8.8.8: seq=1357 ttl=37 time=30.030 ms
+64 bytes from 8.8.8.8: seq=1358 ttl=37 time=22.438 ms
+64 bytes from 8.8.8.8: seq=1359 ttl=37 time=22.713 ms
+64 bytes from 8.8.8.8: seq=1360 ttl=37 time=22.826 ms
+64 bytes from 8.8.8.8: seq=1361 ttl=37 time=23.852 ms
+64 bytes from 8.8.8.8: seq=1362 ttl=37 time=23.865 ms
+64 bytes from 8.8.8.8: seq=1363 ttl=37 time=23.787 ms
+64 bytes from 8.8.8.8: seq=1364 ttl=37 time=21.711 ms
+64 bytes from 8.8.8.8: seq=1365 ttl=37 time=21.987 ms
+64 bytes from 8.8.8.8: seq=1366 ttl=37 time=22.170 ms
+64 bytes from 8.8.8.8: seq=1367 ttl=37 time=20.609 ms
+64 bytes from 8.8.8.8: seq=1368 ttl=37 time=23.058 ms
+64 bytes from 8.8.8.8: seq=1369 ttl=37 time=22.872 ms
+64 bytes from 8.8.8.8: seq=1370 ttl=37 time=23.863 ms
+64 bytes from 8.8.8.8: seq=1371 ttl=37 time=23.268 ms
+64 bytes from 8.8.8.8: seq=1372 ttl=37 time=23.730 ms
+64 bytes from 8.8.8.8: seq=1373 ttl=37 time=39.250 ms
+64 bytes from 8.8.8.8: seq=1374 ttl=37 time=22.547 ms
+64 bytes from 8.8.8.8: seq=1375 ttl=37 time=20.458 ms
+64 bytes from 8.8.8.8: seq=1376 ttl=37 time=24.053 ms
+64 bytes from 8.8.8.8: seq=1377 ttl=37 time=22.622 ms
+64 bytes from 8.8.8.8: seq=1378 ttl=37 time=21.117 ms
+64 bytes from 8.8.8.8: seq=1379 ttl=37 time=23.062 ms
+64 bytes from 8.8.8.8: seq=1380 ttl=37 time=20.847 ms
+64 bytes from 8.8.8.8: seq=1381 ttl=37 time=21.727 ms
+64 bytes from 8.8.8.8: seq=1382 ttl=37 time=23.073 ms
+64 bytes from 8.8.8.8: seq=1383 ttl=37 time=21.761 ms
+64 bytes from 8.8.8.8: seq=1384 ttl=37 time=20.773 ms
+64 bytes from 8.8.8.8: seq=1385 ttl=37 time=22.982 ms
+64 bytes from 8.8.8.8: seq=1386 ttl=37 time=22.785 ms
+64 bytes from 8.8.8.8: seq=1387 ttl=37 time=23.804 ms
+64 bytes from 8.8.8.8: seq=1388 ttl=37 time=23.815 ms
+64 bytes from 8.8.8.8: seq=1389 ttl=37 time=23.356 ms
+64 bytes from 8.8.8.8: seq=1390 ttl=37 time=25.623 ms
+64 bytes from 8.8.8.8: seq=1391 ttl=37 time=23.422 ms
+64 bytes from 8.8.8.8: seq=1392 ttl=37 time=23.779 ms
+64 bytes from 8.8.8.8: seq=1393 ttl=37 time=25.455 ms
+64 bytes from 8.8.8.8: seq=1394 ttl=37 time=23.970 ms
+64 bytes from 8.8.8.8: seq=1395 ttl=37 time=24.414 ms
+64 bytes from 8.8.8.8: seq=1396 ttl=37 time=25.027 ms
+64 bytes from 8.8.8.8: seq=1397 ttl=37 time=21.196 ms
+64 bytes from 8.8.8.8: seq=1398 ttl=37 time=25.517 ms
+64 bytes from 8.8.8.8: seq=1399 ttl=37 time=22.618 ms
+64 bytes from 8.8.8.8: seq=1400 ttl=37 time=23.156 ms
+64 bytes from 8.8.8.8: seq=1401 ttl=37 time=23.159 ms
+64 bytes from 8.8.8.8: seq=1402 ttl=37 time=22.405 ms
+64 bytes from 8.8.8.8: seq=1403 ttl=37 time=20.563 ms
+64 bytes from 8.8.8.8: seq=1404 ttl=37 time=22.330 ms
+64 bytes from 8.8.8.8: seq=1405 ttl=37 time=21.560 ms
+64 bytes from 8.8.8.8: seq=1406 ttl=37 time=23.400 ms
+64 bytes from 8.8.8.8: seq=1407 ttl=37 time=23.882 ms
+64 bytes from 8.8.8.8: seq=1408 ttl=37 time=23.742 ms
+64 bytes from 8.8.8.8: seq=1409 ttl=37 time=20.933 ms
+64 bytes from 8.8.8.8: seq=1410 ttl=37 time=24.015 ms
+64 bytes from 8.8.8.8: seq=1411 ttl=37 time=22.907 ms
+64 bytes from 8.8.8.8: seq=1412 ttl=37 time=26.070 ms
+64 bytes from 8.8.8.8: seq=1413 ttl=37 time=100.998 ms
+64 bytes from 8.8.8.8: seq=1414 ttl=37 time=20.834 ms
+64 bytes from 8.8.8.8: seq=1415 ttl=37 time=21.884 ms
+64 bytes from 8.8.8.8: seq=1416 ttl=37 time=21.488 ms
+64 bytes from 8.8.8.8: seq=1417 ttl=37 time=22.416 ms
+64 bytes from 8.8.8.8: seq=1418 ttl=37 time=58.527 ms
+64 bytes from 8.8.8.8: seq=1419 ttl=37 time=19.633 ms
+PS C:\Users\labim\OneDrive\Desktop\kuber> kubectl delete -f pod.yaml
+pod "demo" deleted
+
+
+swarm
+
+PS C:\Users\labim\OneDrive\Desktop\kuber> docker swarm init
+Error response from daemon: This node is already part of a swarm. Use "docker swarm leave" to leave this swarm and join another one.
+PS C:\Users\labim\OneDrive\Desktop\kuber> docker node ls
+ID                            HOSTNAME         STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+3fzipvw9ift0uz2fxnp77qjsm *   docker-desktop   Ready     Active         Leader           20.10.11
+PS C:\Users\labim\OneDrive\Desktop\kuber> docker service create --name deno alpine:3.5 ping 8.8.8.8
+m5uiy4muc0ysyldjtv5rl02j1
+overall progress: 0 out of 1 tasks
+PS C:\Users\labim\OneDrive\Desktop\kuber> docker service logs deno
+deno.1.qrlxc4znvmjx@docker-desktop    | PING 8.8.8.8 (8.8.8.8): 56 data bytes
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=0 ttl=37 time=132.140 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=1 ttl=37 time=35.326 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=2 ttl=37 time=20.702 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=3 ttl=37 time=21.381 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=4 ttl=37 time=23.156 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=5 ttl=37 time=22.383 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=6 ttl=37 time=20.545 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=7 ttl=37 time=21.393 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=8 ttl=37 time=66.376 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=9 ttl=37 time=20.885 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=10 ttl=37 time=21.244 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=11 ttl=37 time=20.853 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=12 ttl=37 time=21.332 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=13 ttl=37 time=21.793 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=14 ttl=37 time=22.114 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=15 ttl=37 time=20.208 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=16 ttl=37 time=22.315 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=17 ttl=37 time=21.555 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=18 ttl=37 time=145.005 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=19 ttl=37 time=18.785 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=20 ttl=37 time=22.958 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=21 ttl=37 time=23.062 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=22 ttl=37 time=21.331 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=23 ttl=37 time=20.625 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=24 ttl=37 time=21.713 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=25 ttl=37 time=21.456 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=26 ttl=37 time=30.453 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=27 ttl=37 time=21.900 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=28 ttl=37 time=22.564 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=29 ttl=37 time=840.187 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=30 ttl=37 time=20.243 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=31 ttl=37 time=21.440 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=32 ttl=37 time=20.216 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=33 ttl=37 time=20.782 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=34 ttl=37 time=22.284 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=35 ttl=37 time=20.285 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=36 ttl=37 time=20.634 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=37 ttl=37 time=24.595 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=38 ttl=37 time=20.011 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=39 ttl=37 time=20.109 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=40 ttl=37 time=20.254 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=41 ttl=37 time=20.230 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=42 ttl=37 time=28.807 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=43 ttl=37 time=23.128 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=44 ttl=37 time=21.745 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=45 ttl=37 time=21.385 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=46 ttl=37 time=20.750 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=47 ttl=37 time=27.891 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=48 ttl=37 time=20.127 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=49 ttl=37 time=49.692 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=50 ttl=37 time=20.158 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=51 ttl=37 time=19.721 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=52 ttl=37 time=20.312 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=53 ttl=37 time=21.293 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=54 ttl=37 time=20.604 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=55 ttl=37 time=20.132 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=56 ttl=37 time=102.887 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=57 ttl=37 time=66.653 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=58 ttl=37 time=20.123 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=59 ttl=37 time=20.383 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=60 ttl=37 time=22.489 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=61 ttl=37 time=99.146 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=62 ttl=37 time=20.927 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=63 ttl=37 time=23.962 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=64 ttl=37 time=20.774 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=65 ttl=37 time=21.601 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=66 ttl=37 time=20.777 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=67 ttl=37 time=20.632 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=68 ttl=37 time=20.585 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=69 ttl=37 time=21.348 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=70 ttl=37 time=52.312 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=71 ttl=37 time=19.661 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=72 ttl=37 time=19.332 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=73 ttl=37 time=19.788 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=74 ttl=37 time=23.070 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=75 ttl=37 time=20.490 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=76 ttl=37 time=20.645 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=77 ttl=37 time=22.105 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=78 ttl=37 time=20.460 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=79 ttl=37 time=19.594 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=80 ttl=37 time=19.758 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=81 ttl=37 time=20.044 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=82 ttl=37 time=20.438 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=83 ttl=37 time=22.231 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=84 ttl=37 time=30.303 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=85 ttl=37 time=21.005 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=86 ttl=37 time=20.652 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=87 ttl=37 time=20.692 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=88 ttl=37 time=20.261 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=89 ttl=37 time=79.883 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=90 ttl=37 time=19.944 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=91 ttl=37 time=18.671 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=92 ttl=37 time=19.921 ms
+deno.1.qrlxc4znvmjx@docker-desktop    | 64 bytes from 8.8.8.8: seq=93 ttl=37 time=19.823 ms
